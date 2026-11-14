@@ -1,2 +1,24 @@
-# Cha_Portfolio
-This is my portfolio
+# Cha Portfolio
+
+차성진 개발자 포트폴리오 사이트입니다.
+Spring Boot로 직접 구현하고, 프로젝트 데이터를 **논문 / 학교활동** 카테고리로 나눠 보여줍니다.
+각 프로젝트는 문제 정의 · 담당 역할 · 기술적 의사결정 · 트러블슈팅 · 성과를 상세 페이지로 제공합니다.
+
+## 실행 방법
+
+```bash
+./mvnw spring-boot:run
+```
+
+실행 후 `http://localhost:8080` 접속
+
+## 수록 프로젝트
+
+### 논문
+- **API Gateway 성능 비교 연구** — MSA 환경에서 Nginx / Kong / Spring Cloud Gateway를 JWT 인증·트래픽 부하 조건에서 비교
+
+### 학교활동
+- **안심집** (GDGoC) — 공공데이터 기반 1인 가구 동네 안전등급 분석 서비스
+- **TrackLook** (Likelion) — 네이버 리뷰를 AI로 분석해 카공하기 좋은 카페를 추천하는 서비스
+- **다시 봄** (Likelion 해커톤, 본선 진출) — 완경기 여성의 몸·마음·피부 신호를 AI로 연결하는 헬스케어 서비스
+- **약속 (Promise)** — 처방전 사진 한 장으로 복약 알림을 자동 등록하는 시니어 복약 관리 시스템
