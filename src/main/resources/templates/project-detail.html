@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${project.title} + ' | 차성진'">프로젝트 상세</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header class="detail-header">
+    <a class="back-link" th:href="@{/}">&larr; 목록으로</a>
+    <h1 th:text="${project.title}">프로젝트명</h1>
+    <p class="period" th:text="${project.period}">기간</p>
+    <div class="tech-tags">
+        <span class="tag" th:each="tech : ${project.techStack}" th:text="${tech}">tech</span>
+    </div>
+    <div class="external-links">
+        <a th:if="${project.githubUrl}" th:href="${project.githubUrl}" target="_blank">GitHub</a>
+        <a th:if="${project.demoUrl}" th:href="${project.demoUrl}" target="_blank">Demo</a>
+    </div>
+</header>
+
+<main class="detail-body">
+    <section>
+        <h2>문제 정의</h2>
+        <p th:text="${project.problem}">왜 만들었는지</p>
+    </section>
+
+    <section>
+        <h2>담당 역할</h2>
+        <p th:text="${project.role}">맡은 부분</p>
+    </section>
+
+    <section>
+        <h2>기술적 의사결정</h2>
+        <p th:text="${project.techDecision}">왜 이 기술을 선택했는지</p>
+    </section>
+
+    <section>
+        <h2>트러블슈팅</h2>
+        <p th:text="${project.troubleshooting}">막혔던 문제와 해결 과정</p>
+    </section>
+
+    <section>
+        <h2>성과 / 결과</h2>
+        <p th:text="${project.outcome}">정량적 성과</p>
+    </section>
+</main>
+
+</body>
+</html>

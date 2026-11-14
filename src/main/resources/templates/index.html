@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차성진 | Backend Developer Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header class="hero">
+    <h1>차성진</h1>
+    <p class="role">Backend Developer</p>
+    <p class="intro">
+        순천향대학교 의료IT공학과, 백엔드 개발자를 지향합니다.<br>
+        외부 API 연동, 서버 아키텍처 설계, 성능 벤치마킹에 관심이 많습니다.
+    </p>
+    <nav class="links">
+        <a href="https://github.com/cha771133-sys" target="_blank">GitHub</a>
+        <a href="mailto:your-email@example.com">Email</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section" th:each="categoryEntry : ${groupedProjects}">
+        <h2 th:text="${categoryEntry.key}">카테고리</h2>
+        <div class="project-grid">
+            <a class="project-card"
+               th:each="project : ${categoryEntry.value}"
+               th:href="@{/projects/{id}(id=${project.id})}">
+                <h3 th:text="${project.title}">프로젝트명</h3>
+                <p class="summary" th:text="${project.summary}">한 줄 요약</p>
+                <div class="tech-tags">
+                    <span class="tag" th:each="tech : ${project.techStack}" th:text="${tech}">tech</span>
+                </div>
+                <p class="period" th:text="${project.period}">기간</p>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Seongjin Cha</p>
+</footer>
+
+</body>
+</html>

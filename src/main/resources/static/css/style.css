@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+.hero h1 { margin: 0 0 4px; }
+.hero .role { font-weight: bold; margin: 0 0 12px; }
+.hero .links a { margin-right: 12px; }
+
+main { margin-bottom: 40px; }
+.section h2 { margin-bottom: 16px; }
+
+.project-grid {
+    display: block;
+}
+
+.project-card {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+.project-card h3 { margin: 0 0 8px; }
+.project-card .summary { margin: 0 0 8px; }
+.project-card .period { font-size: 0.9rem; }
+
+.tech-tags { margin-bottom: 8px; }
+.tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+footer { font-size: 0.85rem; }
+
+/* 상세 페이지 */
+.detail-header { margin-bottom: 24px; }
+.back-link { display: inline-block; margin-bottom: 12px; }
+.detail-header h1 { margin: 0 0 4px; }
+.detail-header .period { margin-bottom: 12px; }
+.external-links a { margin-right: 12px; }
+
+.detail-body section { margin-bottom: 24px; }
+.detail-body h2 {
+    font-size: 1.05rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+.detail-body p { white-space: pre-line; }
