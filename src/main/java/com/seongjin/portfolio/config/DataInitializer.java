@@ -105,6 +105,7 @@ public class DataInitializer implements CommandLineRunner {
                         """)
                 .outcome("진행 중. 관악구 대상 통합 안전데이터 CSV 완성 - 총 15,399행 (CCTV 2,106 / 보안등 13,283 / 파출소 9 / 범죄통계 1)")
                 .techStack(List.of("Python", "Pandas"))
+                .githubUrl("https://github.com/fud21/2026_GDGoC_SCH")
                 .period("2026.10 - 진행중")
                 .displayOrder(2)
                 .build());
